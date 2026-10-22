@@ -260,7 +260,7 @@ function Experience() {
 
 function ProjectCard({ p }) {
   return (
-    <article className={`project reveal ${p.featured ? 'project--featured' : ''}`}>
+    <article className={`project ${p.featured ? 'project--featured' : ''}`}>
       <a href={p.live} target="_blank" rel="noreferrer" className="project__media" tabIndex={-1}>
         <img src={p.image} alt={`${p.title} preview`} loading="lazy" width="1280" height="720" />
       </a>
@@ -311,7 +311,8 @@ function Projects() {
             </button>
           ))}
         </div>
-        <div className="projects">
+        {/* keyed by filter so the cards replay their entry animation on each change */}
+        <div className="projects" key={filter} aria-live="polite">
           {shown.map((p) => (
             <ProjectCard p={p} key={p.id} />
           ))}
