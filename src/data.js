@@ -29,12 +29,16 @@ export const experience = [
     project: 'MoneyWorks4Me',
     modules: [
       'Stock Screener',
-      'Mutual Fund Dashboard',
+      'Company Detail Pages',
+      'Mutual Fund Detail Pages',
       'Mutual Fund Screener',
       'Investment Dashboard',
       'Portfolio Manager',
       'Watchlist',
       'Stock & Fund Listings',
+      'Financial Planning',
+      'Calculators',
+      'Portfolio Manager',
     ],
     points: [
       'Develop and maintain responsive production web apps with React, TypeScript, SASS/SCSS and Bootstrap.',
