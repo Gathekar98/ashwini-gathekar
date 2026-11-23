@@ -16,7 +16,7 @@ export const profile = {
 
 export const stats = [
   { value: '2+', label: 'Years experience' },
-  { value: '7', label: 'Live projects' },
+  { value: '9', label: 'Live projects' },
   { value: '19', label: 'GitHub repos' },
 ];
 
@@ -26,29 +26,85 @@ export const experience = [
     role: 'Frontend Developer',
     period: 'Sep 2024 — Present',
     location: 'Pune, India',
-    project: 'MoneyWorks4Me',
-    modules: [
-      'Stock Screener',
-      'Company Detail Pages',
-      'Mutual Fund Detail Pages',
-      'Mutual Fund Screener',
-      'Investment Dashboard',
-      'Portfolio Manager',
-      'Watchlist',
-      'Stock & Fund Listings',
-      'Financial Planning',
-      'Calculators',
-      'Portfolio Manager',
+    projects: [
+      {
+        name: 'MoneyWorks4Me',
+        type: 'Wealth research and investment platform',
+        url: 'https://www.moneyworks4me.com/',
+        summary:
+          'Developed responsive, data-driven interfaces for a wealth-tech platform offering stock and mutual-fund research, screeners, portfolio tools, dashboards, reports, and financial calculators.',
+        points: [
+          'Built reusable interfaces using React.js, JavaScript, TypeScript, HTML5, CSS3, SCSS, and Bootstrap.',
+          'Developed conditional dashboards, screeners, listing pages, portfolio tools, reports, calculators, and customer-facing workflows.',
+          'Led frontend development of the Portfolio Verdict Report with Puppeteer PDF exports and built an auto-filled agreement workflow using PHPWord.',
+          'Contributed to a site-wide theme migration, responsive improvements, and React and Node.js upgrade-related changes.',
+          'Improved accessibility, SEO, and production quality through ARIA, keyboard navigation, Lighthouse audits, canonical URLs, debugging, and AI-assisted testing with manual verification.',
+        ],
+        modules: [
+          'Stock Screener',
+          'Company Detail Pages',
+          'Mutual Fund Detail Pages',
+          'Mutual Fund Screener',
+          'Investment Dashboard',
+          'Portfolio Manager',
+          'Watchlist',
+          'Stock & Fund Listings',
+          'Financial Planning',
+          'Calculators',
+          'Portfolio Verdict Report',
+        ],
+      },
+      {
+        name: 'Third Rock Wealth',
+        type: 'Mutual fund distribution and financial-planning platform',
+        url: 'https://thirdrockwealth.com/',
+        summary:
+          'Developed responsive customer experiences for a mutual-fund platform covering fund research, financial calculators, client onboarding, risk profiling, goal planning, KYC verification, and investment workflows.',
+        points: [
+          'Built responsive interfaces using HTML5, CSS3, vanilla JavaScript, and reusable frontend patterns.',
+          'Developed fund screeners, fund-detail pages, comparison and portfolio-overlap tools, watchlists, and financial calculators.',
+          'Integrated PHP JSON APIs using Fetch API to display dynamic fund, portfolio, session, and customer information.',
+          'Contributed to registration, risk profiling, financial goals, fund planning, KYC verification, and investment-handoff workflows.',
+          'Implemented validation, authentication-aware UI states, accessibility, SEO-friendly routing, error handling, cross-browser compatibility, and AI-assisted testing with manual verification.',
+        ],
+        modules: [
+          'Fund Screener',
+          'Fund Detail Pages',
+          'Fund Comparison',
+          'Portfolio Overlap',
+          'Watchlist',
+          'Calculators',
+          'Risk Profiling',
+          'Goal Planning',
+          'KYC Verification',
+        ],
+      },
     ],
-    points: [
-      'Developed and maintained responsive interfaces for a finance-domain investment platform using React.js, JavaScript, HTML5, SCSS, Bootstrap, and related frontend technologies.',
-      'Built and enhanced investment dashboards, stock and mutual fund screeners, stock and fund listing pages, and portfolio management interfaces.',
-      'Translated Figma designs into responsive, pixel-accurate layouts for desktop, tablet, and mobile devices.',
-      'Developed reusable UI components and integrated REST APIs to display dynamic investment and portfolio data.',
-      'Improved website quality through Lighthouse audits, frontend debugging, SEO enhancements, and accessibility improvements.',
-      'Enhanced semantic HTML, form labels, ARIA attributes, and keyboard accessibility across relevant interfaces.',
-      'Worked on frontend enhancements, bug fixes, Bootstrap migration-related changes, and React version compatibility updates in an existing application.',
-    ],
+  },
+];
+
+export const work = [
+  {
+    id: 'mw4me',
+    title: 'MoneyWorks4Me',
+    company: 'The Alchemist Ark',
+    tagline: 'Wealth research and investment platform',
+    description:
+      'Stock and mutual-fund research, screeners, dashboards, portfolio tools, reports and calculators. Led frontend for the Portfolio Verdict Report with Puppeteer PDF exports, and built an auto-filled agreement workflow with PHPWord.',
+    tech: ['React', 'TypeScript', 'SCSS', 'Bootstrap', 'Puppeteer', 'PHPWord'],
+    image: '/projects/mw4me.webp',
+    live: 'https://www.moneyworks4me.com/',
+  },
+  {
+    id: 'trw',
+    title: 'Third Rock Wealth',
+    company: 'The Alchemist Ark',
+    tagline: 'Mutual fund distribution and financial planning',
+    description:
+      'Fund screeners and detail pages, comparison and portfolio-overlap tools, calculators, and onboarding flows for registration, risk profiling, goal planning and KYC verification.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Fetch API', 'PHP JSON APIs'],
+    image: '/projects/trw.webp',
+    live: 'https://thirdrockwealth.com/',
   },
 ];
 

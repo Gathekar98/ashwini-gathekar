@@ -576,11 +576,51 @@ svg {
 }
 
 .job__project {
-  margin-top: 8px;
-  color: var(--muted);
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
 }
 
-.job__project strong {
+.job__project:first-of-type {
+  margin-top: 18px;
+}
+
+.job__project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.job__project h4 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
+.job__project-head a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--lime);
+}
+
+.job__project-head svg {
+  width: 14px;
+  height: 14px;
+}
+
+.job__type {
+  margin-top: 2px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--violet);
+}
+
+.job__summary {
+  margin-top: 10px;
   color: var(--text);
 }
 
@@ -629,6 +669,27 @@ svg {
 }
 
 /* Projects */
+.subhead {
+  display: flex;
+  align-items: baseline;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.subhead h3 {
+  font-size: 22px;
+}
+
+.subhead p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.projects--work {
+  margin-bottom: 64px;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -742,6 +803,11 @@ svg {
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 5px;
+}
+
+.badge--violet {
+  background: var(--violet);
+  color: #1e1240;
 }
 
 .project h3 {

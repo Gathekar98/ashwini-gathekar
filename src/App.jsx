@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { profile, stats, experience, projects, filters, skills, education } from './data.js';
+import { profile, stats, experience, work, projects, filters, skills, education } from './data.js';
 
 const Icon = {
   github: (
@@ -235,21 +235,30 @@ function Experience() {
               <h3>
                 {job.role} <span className="accent">@ {job.company}</span>
               </h3>
-              <p className="job__project">
-                Project: <strong>{job.project}</strong>
-              </p>
-              <ul className="job__points">
-                {job.points.map((pt) => (
-                  <li key={pt}>{pt}</li>
-                ))}
-              </ul>
-              <div className="chips">
-                {job.modules.map((m) => (
-                  <span className="chip chip--violet" key={m}>
-                    {m}
-                  </span>
-                ))}
-              </div>
+              {job.projects.map((proj) => (
+                <div className="job__project" key={proj.name}>
+                  <div className="job__project-head">
+                    <h4>{proj.name}</h4>
+                    <a href={proj.url} target="_blank" rel="noreferrer">
+                      Live site {Icon.external}
+                    </a>
+                  </div>
+                  <p className="job__type">{proj.type}</p>
+                  <p className="job__summary">{proj.summary}</p>
+                  <ul className="job__points">
+                    {proj.points.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
+                  <div className="chips">
+                    {proj.modules.map((m) => (
+                      <span className="chip chip--violet" key={m}>
+                        {m}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </article>
         ))}
@@ -267,7 +276,14 @@ function ProjectCard({ p }) {
       <div className="project__body">
         <p className="project__tag">
           {p.featured && <span className="badge">Featured</span>}
-          {p.category.join(' · ')}
+          {p.company ? (
+            <>
+              <span className="badge badge--violet">Professional</span>
+              {p.company}
+            </>
+          ) : (
+            p.category.join(' · ')
+          )}
         </p>
         <h3>{p.title}</h3>
         <p className="project__tagline">{p.tagline}</p>
@@ -281,11 +297,13 @@ function ProjectCard({ p }) {
         </div>
         <div className="project__links">
           <a href={p.live} target="_blank" rel="noreferrer" className="btn btn--small btn--primary">
-            Live demo {Icon.external}
+            {p.company ? 'Visit live site' : 'Live demo'} {Icon.external}
           </a>
-          <a href={p.code} target="_blank" rel="noreferrer" className="btn btn--small btn--ghost">
-            {Icon.github} Code
-          </a>
+          {p.code && (
+            <a href={p.code} target="_blank" rel="noreferrer" className="btn btn--small btn--ghost">
+              {Icon.github} Code
+            </a>
+          )}
         </div>
       </div>
     </article>
@@ -299,12 +317,23 @@ function Projects() {
   return (
     <section className="section" id="projects">
       <div className="container">
-        <SectionHead
-          index="03"
-          title="Selected projects"
-          sub="Things I've designed, built and shipped — each one is live and open source."
-        />
-        <div className="filters reveal" role="group" aria-label="Filter projects">
+        <SectionHead index="03" title="Selected projects" sub="Production work from my job, plus things I've built on my own." />
+
+        <div className="subhead reveal">
+          <h3>Professional work</h3>
+          <p>Live products I build at The Alchemist Ark.</p>
+        </div>
+        <div className="projects projects--work">
+          {work.map((p) => (
+            <ProjectCard p={p} key={p.id} />
+          ))}
+        </div>
+
+        <div className="subhead reveal">
+          <h3>Personal projects</h3>
+          <p>Designed, built and shipped by me — each one is live and open source.</p>
+        </div>
+        <div className="filters reveal" role="group" aria-label="Filter personal projects">
           {filters.map((f) => (
             <button key={f} className={`filter ${filter === f ? 'is-active' : ''}`} aria-pressed={filter === f} onClick={() => setFilter(f)}>
               {f}
