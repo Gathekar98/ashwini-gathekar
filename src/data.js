@@ -143,7 +143,7 @@ export const projects = [
       'Custom state-machine architecture, touch-optimized drag and drop with the Pointer Events API, an SVG village map and saved progress — packaged for Android with Capacitor.',
     tech: ['React', 'TypeScript', 'Capacitor', 'SVG'],
     image: '/projects/picpuzzle.webp',
-    live: 'https://picture-puzzle-game-one.vercel.app',
+    live: 'https://picture-puzlify.vercel.app',
     code: 'https://github.com/Gathekar98/picture-puzzle-game',
   },
   {
@@ -155,7 +155,7 @@ export const projects = [
       'Search, browse and preview sounds with an in-page audio player and sound detail pages, powered by the Freesound API.',
     tech: ['React', 'Freesound API', 'REST', 'Vite'],
     image: '/projects/ringbox.webp',
-    live: 'https://react-ring-box-ringtone-download-pl.vercel.app',
+    live: 'https://ringbox.vercel.app',
     code: 'https://github.com/Gathekar98/React_RingBox-ringtone-download-platform-',
   },
   {
@@ -167,7 +167,7 @@ export const projects = [
       'Product browsing, cart with quantity controls, validated checkout form and localStorage persistence, all driven by Redux Toolkit global state.',
     tech: ['React', 'Redux Toolkit', 'React Router', 'Vite'],
     image: '/projects/shopkart.webp',
-    live: 'https://react-redux-project-shopping-cart.vercel.app/',
+    live: 'https://shoppingkart-ecom.vercel.app/',
     code: 'https://github.com/Gathekar98/React-Redux-Project---Shopping-Cart',
   },
   {
@@ -179,7 +179,7 @@ export const projects = [
       'Search Unsplash by topic, filter by orientation, preview full-size images, save favourites and download high-resolution photos.',
     tech: ['Next.js', 'Tailwind', 'Unsplash API'],
     image: '/projects/frame.webp',
-    live: 'https://image-search-app-react-two.vercel.app',
+    live: 'https://pixenova.vercel.app',
     code: 'https://github.com/Gathekar98/ImageSearchApp-React',
   },
   {
